@@ -32,9 +32,29 @@
 <br>
 <button id="btn">按钮</button>
 
-<img src="images/438211.jpg">
+<%--<img src="images/438211.jpg"><br>--%>
+
+<br>
+
+<h1>数据校验 testValidated</h1><br>
+<form action="${pageContext.request.contextPath}/user/testValidated" method="post">
+    name:<input type="text" name="name"/><br>
+    sex :<input type="text" name="sex"/><br>
+    <input type="submit" value="提交"/><br>
+</form>
+<br>
 
 
+<h1>数据校验 testValid</h1><br>
+<form action="${pageContext.request.contextPath}/user/testValid" method="post">
+    name:<input type="text" name="name"/><br>
+    sex :<input type="text" name="sex"/><br>
+    <input type="submit" value="提交"/><br>
+</form>
+<br>
+
+<a href="user/testInterceptor1">testInterceptor1</a><br>
+<a href="user/testInterceptor2">testInterceptor2</a><br>
 
 </body>
 </html>

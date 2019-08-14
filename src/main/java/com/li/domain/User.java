@@ -1,10 +1,16 @@
 package com.li.domain;
 
-public class User {
-    private Integer id;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+public class User {
+
+    private Integer id;
+    @Size(min = 3,max = 5,message = "{user.name.length.error}")
     private String name;
 
+    @NotNull(message = "{user.sex.notnull.error}")
     private String sex;
 
     public Integer getId() {
@@ -29,5 +35,14 @@ public class User {
 
     public void setSex(String sex) {
         this.sex = sex == null ? null : sex.trim();
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", sex='" + sex + '\'' +
+                '}';
     }
 }
